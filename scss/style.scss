@@ -1,0 +1,23 @@
+
+
+
+// VARS
+
+@import './vars/reset';
+@import './vars/vars';
+@import './vars/base';
+
+
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:wght@400;700&family=Montserrat:wght@100..900&display=swap');
+
+
+
+// Blocks
+
+@import './blocks/header';
+@import './blocks/chess';
+@import './blocks/stages';
+@import './blocks/cards';
+@import './blocks/footer';

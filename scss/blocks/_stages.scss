@@ -1,0 +1,113 @@
+.stages {
+    padding-top: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.stages__title {
+    
+    h1{
+        position: relative;
+        width: 808px;
+        font-family: $Merri;
+        font-size: 54px;
+        font-weight: 400;
+        text-transform: uppercase; 
+    }
+    
+
+    span{
+        position: absolute;
+        display: block;
+        font-family: $Golos;
+        font-weight: 400;
+        font-size: 20px;
+        color: $blue;
+        text-transform: none;
+        bottom: 10px;
+        right: 32%;
+    }
+}
+.wrapper__stages {  
+    padding-top: 54px;
+    
+}
+.overflow__grid{
+    position: absolute;
+    background-image: url(./../../img/overflow/overflow.png);
+    mix-blend-mode: soft-light;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+.plane{
+    position: absolute;
+    z-index: 100;
+    bottom: 40px;
+    right: 0;
+}
+.grid__stages {
+    
+    display: grid;
+    grid-template-columns: repeat(3, [col] 1fr);
+    grid-template-rows: repeat(3, [row] 1fr);
+    gap: 20px;
+}
+.stages__item {
+    position: relative;
+    background: $bg;
+    min-width: 394px;
+    min-height: 112px;
+    
+    
+}
+
+.item3 {
+    grid-row: span 2;
+}
+
+.item7 {
+    grid-column:  span 2;
+}
+
+
+.number{
+    position: absolute;
+    font-family: $Golos;
+    font-weight: 600;
+    font-size: 20px;
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
+
+}
+.text{
+    font-size: 20px;
+    font-family: $Golos;
+    font-weight: 500;
+    color: $accent;
+    text-align: left;
+    padding-left: 74px;
+    margin: 25px 0;
+    margin-right: 20px;
+    max-width: 500px;
+    
+    
+
+    
+}

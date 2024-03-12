@@ -1,0 +1,691 @@
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:wght@400;700&family=Montserrat:wght@100..900&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  width: clamp(375px, 100vw, 1920px);
+  height: 100vh;
+  background-color: #fff;
+  font-family: "Merriweather", serif;
+  color: #313131;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 72px;
+  max-width: 1920px;
+}
+@media (min-width: 1500px) {
+  .container {
+    padding: 0 100px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    padding: 0 120px;
+  }
+}
+
+.header {
+  background-color: #E9DED4;
+  background-image: url(./../img/svg/bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1360px;
+  height: 700px;
+  z-index: 100;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 1500px) {
+  .header {
+    width: 1920px;
+    height: 700px;
+  }
+}
+
+.overflow {
+  position: absolute;
+  background-image: url(./../../img/overflow/overflow.png);
+  mix-blend-mode: soft-light;
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1360px;
+  height: 700px;
+  z-index: 1;
+  pointer-events: none;
+}
+@media (min-width: 1500px) {
+  .overflow {
+    width: 1920px;
+    height: 700px;
+  }
+}
+
+.logo-img {
+  z-index: 101;
+  margin-top: 30px;
+}
+@media (min-width: 1500px) {
+  .logo-img {
+    position: absolute;
+    left: 250px;
+  }
+}
+@media (min-width: 1600px) {
+  .logo-img {
+    position: absolute;
+    left: 300px;
+  }
+}
+@media (min-width: 1700px) {
+  .logo-img {
+    position: absolute;
+    left: 350px;
+  }
+}
+
+.header__content {
+  width: 550px;
+}
+@media (min-width: 1500px) {
+  .header__content {
+    position: absolute;
+    left: 250px;
+    top: 100px;
+  }
+}
+@media (min-width: 1600px) {
+  .header__content {
+    position: absolute;
+    left: 300px;
+    top: 100px;
+  }
+}
+@media (min-width: 1700px) {
+  .header__content {
+    position: absolute;
+    left: 350px;
+    top: 100px;
+  }
+}
+
+.header__title {
+  font-family: "Merriweather", serif;
+  font-size: clamp(2.25rem, 1.886rem + 1.553vw, 3.75rem);
+  line-height: 1.1;
+  font-weight: 400;
+  padding-top: 62px;
+  text-transform: uppercase;
+}
+.header__title p:nth-child(2) {
+  text-align: center;
+}
+.header__title p:nth-child(3) {
+  text-align: center;
+}
+
+.header__subtitle {
+  font-size: 18px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  padding: 0 8px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .buttons {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+  }
+  .buttons br {
+    display: none;
+  }
+}
+
+.header__button-join {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  width: 263px;
+  height: 72px;
+  text-align: center;
+  border-radius: 66px;
+  color: #fff;
+  background: #1F1F1F;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+@media (max-width: 500px) {
+  .header__button-join {
+    width: 100%;
+    height: 0;
+    padding: 18px 0;
+  }
+}
+.header__button-join:hover {
+  background: #FBCE51;
+  color: #313131;
+}
+
+.header__button-info {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  width: 263px;
+  height: 72px;
+  text-align: center;
+  border-radius: 66px;
+  color: #1F1F1F;
+  border: 2px solid #1F1F1F;
+  background-color: transparent;
+  transition: all 0.3s linear;
+}
+@media (max-width: 500px) {
+  .header__button-info {
+    width: 100%;
+    height: 0;
+    padding: 18px 0;
+  }
+}
+.header__button-info:hover {
+  background-color: #1F1F1F;
+  color: #fff;
+}
+
+.redline {
+  overflow: hidden;
+  height: 60px;
+  width: 100vw;
+  text-align: center;
+}
+
+.wrapper-redline {
+  display: flex;
+}
+
+.line__item {
+  display: inline-block;
+  padding: 8px 0;
+  background: #F54932;
+  font-size: 22px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: center;
+  animation: Run-line 45s linear infinite;
+}
+
+@keyframes Run-line {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.section__main {
+  padding-top: 84px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.section__main-title {
+  text-transform: uppercase;
+  font-family: "Merriweather", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #1F1F1F;
+  padding-right: 64px;
+}
+.section__main-title span {
+  color: #F54932;
+}
+
+.section__main-img {
+  width: 394px;
+  height: 394px;
+}
+
+.section__chess {
+  display: flex;
+}
+
+.chess-img {
+  width: 528px;
+  height: 566px;
+}
+
+.chess__title {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: "Merriweather", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #1F1F1F;
+}
+.chess__title span {
+  color: #F54932;
+}
+
+.wrapper__chess {
+  padding: 0 44px;
+  padding-top: 60px;
+}
+
+.grid__chess {
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid__item {
+  font-size: 20px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  padding: 15px 0;
+  border-bottom: 3px solid #D0D0D0;
+  color: #313131;
+}
+.grid__item:nth-child(odd) {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  color: #1F1F1F;
+  border-right: 3px solid #D0D0D0;
+}
+.grid__item:nth-child(even) {
+  padding-left: 16px;
+}
+.grid__item:nth-child(9) {
+  border-bottom: none;
+}
+.grid__item:nth-child(10) {
+  border-bottom: none;
+}
+.grid__item:nth-child(10) span {
+  padding-right: 12px;
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
+.chess__subtitle {
+  white-space: nowrap;
+  padding-top: 48px;
+  font-size: 20px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  color: #3057A2;
+}
+
+.stages {
+  padding-top: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stages__title h1 {
+  position: relative;
+  width: 808px;
+  font-family: "Merriweather", serif;
+  font-size: 54px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.stages__title span {
+  position: absolute;
+  display: block;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #3057A2;
+  text-transform: none;
+  bottom: 10px;
+  right: 32%;
+}
+
+.wrapper__stages {
+  padding-top: 54px;
+}
+
+.overflow__grid {
+  position: absolute;
+  background-image: url(./../../img/overflow/overflow.png);
+  mix-blend-mode: soft-light;
+  mix-blend-mode: multiply;
+  opacity: 0.4;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.plane {
+  position: absolute;
+  z-index: 100;
+  bottom: 40px;
+  right: 0;
+}
+
+.grid__stages {
+  display: grid;
+  grid-template-columns: repeat(3, [col] 1fr);
+  grid-template-rows: repeat(3, [row] 1fr);
+  gap: 20px;
+}
+
+.stages__item {
+  position: relative;
+  background: #E9DED4;
+  min-width: 394px;
+  min-height: 112px;
+}
+
+.item3 {
+  grid-row: span 2;
+}
+
+.item7 {
+  grid-column: span 2;
+}
+
+.number {
+  position: absolute;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 20px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 500;
+  color: #313131;
+  text-align: left;
+  padding-left: 74px;
+  margin: 25px 0;
+  margin-right: 20px;
+  max-width: 500px;
+}
+
+.cards__person {
+  padding-top: 200px;
+  padding-bottom: 140px;
+}
+
+.wrapper__person {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+.title__person {
+  font-size: clamp(2.25rem, 1.977rem + 1.165vw, 3.375rem);
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #313131;
+}
+
+.cards {
+  padding-top: 60px;
+  gap: 20px;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+}
+.btn img {
+  width: 44px;
+  height: 44px;
+  z-index: 1;
+}
+
+.number__slide {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #646464 !important;
+  padding: 0 14px;
+}
+.number__slide::first-letter {
+  color: #1F1F1F;
+}
+
+.nav-pogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+}
+
+.wrapper__cards {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  width: 340px;
+  height: 550px;
+  scale: 0.95;
+  transition: all 0.4s ease-in-out;
+}
+.wrapper__cards:hover {
+  scale: 1;
+  background-color: #D6D6D6;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.person__img {
+  padding-bottom: 28px;
+  margin-top: 28px;
+}
+.person__img img {
+  width: 320px;
+  height: 320px;
+}
+
+.person__name {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  color: #313131;
+}
+
+.person__title {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  opacity: 0.7;
+  color: #313131;
+  padding-top: 6px;
+}
+
+.person__info {
+  font-size: 16px;
+  font-family: "Golos Text", sans-serif;
+  font-weight: 500;
+  color: #3057A2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.info-btn {
+  width: 113px;
+  height: 35px;
+  border: 2px solid #3057A2;
+  border-radius: 62px;
+  transition: all 0.5s linear;
+}
+.info-btn:hover {
+  background-color: #3057A2;
+  color: #fff;
+}
+
+.redline__footer {
+  overflow: hidden;
+  width: 100vw;
+  text-align: center;
+}
+
+.wrapper-redline {
+  display: flex;
+}
+
+.line__item {
+  display: inline-block;
+  padding: 8px 0;
+  background: #F54932;
+  font-size: 22px;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: center;
+  animation: Run-line 45s linear infinite;
+}
+
+@keyframes Run-line {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.footer {
+  height: 150px;
+  width: 100%;
+  background-color: #E9DED4;
+}
+
+.footer__text {
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #313131;
+  padding: 44px 74px 74px 74px;
+  opacity: 0.5;
+}/*# sourceMappingURL=style.css.map */

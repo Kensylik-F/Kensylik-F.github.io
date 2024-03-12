@@ -1,0 +1,33 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    overflow-x: hidden;
+    width: clamp(375px, 100vw, 1920px);
+    height: 100vh;
+    background-color: #fff;
+    font-family: $Merri;
+    color: $accent;
+}
+
+
+
+.container{
+    margin: 0 auto;
+    padding: 0 72px; 
+    
+    max-width: 1920px;
+
+    @media (min-width: 1500px) {
+        padding: 0 100px;
+        
+    }
+    @media (min-width: 1600px) {
+        padding: 0 120px; 
+        
+    }
+   
+    
+}

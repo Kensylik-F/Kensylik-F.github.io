@@ -1,0 +1,51 @@
+
+// ............fonts..................
+
+$Golos: "Golos Text", sans-serif;
+// font-weight: 400;
+// font-weight: 500;
+// font-weight: 600;
+// font-weight: 700;
+
+$Montserrat:  "Montserrat", sans-serif;
+// font-weight: 500;
+
+$Merri:"Merriweather", serif;
+// font-weight: 700;
+// font-weight: 400;
+
+
+
+// .............COLOR..................
+
+$Red-line: #F54932;
+$Dark: #1F1F1F;
+$Yellow: #FBCE51;
+$accent: #313131;
+$disabled: #D6D6D6;
+$gray: #D0D0D0;
+$blue: #3057A2;
+$bg: #E9DED4;
+
+
+
+
+// MIXIN 
+
+
+@mixin Button{
+    font-family: $Golos;
+    font-weight: 500;
+    font-size: 16px;
+    width: 263px;
+    height: 72px;
+    text-align: center;
+    border-radius: 66px;
+
+    @media (max-width: 500px    ) {
+        width: 100%;
+        height: 0;
+        padding: 18px 0;
+        
+    }
+}
